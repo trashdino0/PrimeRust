@@ -1,0 +1,11 @@
+# Rust build artifacts
+**/target/
+
+# Python tooling cache
+__pycache__/
+.ruff_cache/
+
+# Java build artifacts / IDE
+out/
+.idea/
+*.iml

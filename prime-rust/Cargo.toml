@@ -1,0 +1,24 @@
+[package]
+name = "prime-rust"
+version = "0.1.0"
+edition = "2021"
+description = "Prime generation benchmark (Rust port of PrimeBenchmark.java) — exact-port baseline"
+license = "MIT"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+num-bigint = { version = "0.4", features = ["rand"] }
+num-traits = "0.2"
+num-integer = "0.1"
+rand = "0.8"
+rayon = "1"
+anyhow = "1"
+thiserror = "2"
+sha2 = "0.10"
+mimalloc = "0.1"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+debug = true
